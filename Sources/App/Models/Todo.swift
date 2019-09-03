@@ -9,10 +9,14 @@ final class Todo: SQLiteModel {
     /// A title describing what this `Todo` entails.
     var title: String
 
+    /// The ID of the `TodoCategory` a `Todo` belongs to
+    var categoryID: Int?
+
     /// Creates a new `Todo`.
-    init(id: Int? = nil, title: String) {
+    init(id: Int? = nil, title: String, categoryID: Int? = nil) {
         self.id = id
         self.title = title
+        self.categoryID = categoryID
     }
 }
 
